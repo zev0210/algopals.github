@@ -1,0 +1,1058 @@
+/*Defining Fonts */
+
+@font-face{
+    font-family: GameBubble;
+    src: url(assets/GameBubble.ttf)
+}
+
+
+body{
+    background: #ffeb99;
+}
+
+.screen{
+    display:none;
+}
+
+.screen.active{
+    display:block;
+}
+
+.bg-img
+{
+
+  width: 100%;
+  display: block;
+  position: absolute;   /* IMPORTANT */
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
+
+/*Defining Element Aesthetic Class*/
+
+
+.headings
+{
+    font-family: GameBubble;
+    color: #000000;   
+    font-size: 7em;
+}
+
+
+
+.buttons
+{
+    font-size: 3em;
+    font-family: GameBubble;
+    border-radius: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: #000000;
+    border-color: #000000;
+    color:#f5e6aa;
+}
+
+.buttons:hover{
+     transform: scale(1.2);
+}
+
+.entry-box
+{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 50px;
+    font-family: GameBubble;
+    font-size: 2em;
+    background: #000000;
+    color:#f5e6aa;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.mini-menu.hidden {
+    font-family: GameBubble;
+    display: none;
+}
+
+/* Home Screen */
+
+#img-logo
+{
+    position: absolute;
+    z-index: 1;
+    top:5px;
+    width: 40%;
+    height: 80%;
+    left:50%;
+}
+
+#home-start-button
+{   
+    position: absolute;
+    top: 65%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1s infinite alternate;
+    cursor: pointer;
+     z-index:1;
+
+   }
+
+#home-start-button:hover
+{
+    animation-play-state: paused;
+}
+
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+
+@keyframes bounceAnimation {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+.bouncing-text {
+  animation-name: bounceAnimation;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+
+
+/* Name Entry Screen */
+
+#name-entry-screen-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+#name-screen-title
+{   
+    position: absolute;
+
+    margin-left: 10%;
+    margin-top: 10%;
+    z-index: 1;
+}
+
+#name-entry-box
+{   
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 25%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 50px;
+    font-family: GameBubble;
+    font-size: 2em;
+    background: #000000;
+    color:#f5e6aa;
+    z-index: 1;
+}
+
+
+#confirm-name-btn
+{   
+    position: absolute;
+    margin-left: 46%;
+    margin-top: 35%;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+#confirm-name-btn:hover
+{
+    transform: scale(1.2);
+}
+
+/* Country Information Screen */
+
+#country-entry-screen-container
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#country-screen-title
+{
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 10%;
+    z-index: 1;
+}
+
+#countrySelect
+{
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 25%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50px;
+    font-family: GameBubble;
+    font-size: 2em;
+    background: #000000;
+    color:#f5e6aa;
+    z-index: 1;
+}
+
+#confirm-country-btn
+{
+    position: absolute;
+    margin-left: 46%;
+    margin-top: 35%;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+#confirm-country-btn:hover
+{
+    transform: scale(1.2);
+}
+
+/*Story Screen section*/
+
+#story-screen-1
+{
+    position: relative;
+}
+
+.story-contents
+{   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 20px;
+}
+
+.story-image-container {
+    width: 750px;
+    height: 350px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.3);
+    border-radius: 30px;
+    padding: 15px;
+}
+
+
+.story-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.story-text
+{
+    font-family: GameBubble;
+    font-size: 1.8em;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.button-container
+{
+     position: fixed;
+    bottom: 8%;
+    right: 5%;
+    display: flex;
+    gap: 15px;
+    z-index: 100;
+}
+
+.button-container.center {
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+}
+
+.story-buttons
+{
+    font-size: 2em;
+    font-family: GameBubble;
+    border-radius: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: #000000;
+    border-color: #000000;
+    color:#f5e6aa;
+}
+
+
+
+.story-buttons:hover
+{
+    background-color: #f5e6aa;
+    border-color: #f5e6aa;
+    color:#000000;
+}
+
+
+
+
+/*Pet Selection Screen Design Elements*/
+
+
+#pet-selection-screen-heading
+{
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 5%;
+    z-index: 1
+}
+
+.temp-border
+{
+    border-color: #000000;
+    border-style: double;
+}
+
+
+.pet-option
+{   
+    background-color:#f5e6aa;
+    backdrop-filter: blur(4px);
+    border-radius: 100px;
+    padding: 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.1s;
+    height: 250px;  
+    width: 250px;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgb(0, 0, 0);
+
+}
+.pet-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#pet-selection-container
+{
+    display: flex;
+    position: absolute;
+    gap: 60px;
+    padding: 50px;
+    z-index: 1;
+    top: 25%;  
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.pet-option:hover
+{
+  transform: scale(1.2);
+}
+
+.pet-option.selected
+{
+    background-color:rgb(255, 150, 85)
+
+}
+
+
+#pet-selection-button
+{
+    position:absolute;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 46%;
+    margin-top: 35%;
+
+}
+
+#pet-selection-button:hover{
+    transform: scale(1.2);
+
+}
+
+/*Name pet screen*/ 
+
+
+#naming-pet-heading
+{   
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 5%;
+    z-index: 1;
+}
+
+#pet-name-entry-box
+{
+    position: absolute;
+    margin-left: 38%;
+    margin-top: 32%;
+    z-index: 1;
+}
+
+
+#pet-naming-button-container
+{
+    display: flex;
+    gap:20px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 40%;
+    margin-left: 42%;
+
+}
+
+.game-text{
+    font-family: GameBubble;
+
+}
+
+.instruction-text
+{
+    font-family: GameBubble;
+}
+
+
+
+
+/*Main Game Dashboard*/
+
+
+HTML CSSResult Skip Results Iframe
+EDIT ON
+body {
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  display: flex;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.progress {
+  background: #0000;
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  border-radius: 100px;
+  background: #96f00f;
+  height: 30px;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 68%; }
+}
+
+#algo-meter-container
+{
+    display: flex;
+    gap: 15px;
+    justify-content: center; 
+    align-items: center;
+
+}
+
+#algo-meter-text
+{
+    color: #000;
+    font-size: 40px ;
+    font-family: GameBubble;
+     white-space: nowrap;
+}
+
+
+#upper-game-dashboard
+{
+    position: absolute;
+    display: flex;
+    gap: 25%;
+    margin-top: 25px;
+}
+
+#algo-point-counter
+{
+    color: #000;
+    font-family: GameBubble;
+    font-size: 40px;
+}
+
+#algo-point-container
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 30%;
+        border-color: #000000;
+        border: 4px solid rgb(0, 0, 0);
+        justify-content: center; 
+        align-items: center;
+        background-color: #ffcd03;
+        height:200px;
+        width:200px;
+}
+
+#algo-point-heading
+{
+    color: #000;
+    font-family: GameBubble;
+    font-size: 25px;
+}
+
+
+/* Store Container*/
+#store-container {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    z-index: 100;
+    margin-left: 75%
+
+}
+
+/* Mini Menu Style */
+#store-container .store-menu {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background: #fffef7;
+    border-radius: 20px;
+    border: 3px solid #000000;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+    z-index: 1000;
+    font-family: GameBubble;
+}
+
+#store-container .store-menu.hidden {
+    display: none;
+}
+
+#store-text
+{
+    font-family: GameBubble;
+}
+
+#inventory-text
+{
+    font-family: GameBubble;
+
+}
+
+
+.store-menu-header {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 17px 17px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    font-size: 1rem;
+}
+
+.close-store-btn {
+    background: #000;
+    border: none;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.close-store-btn:hover {
+    background: #ff4444;
+}
+
+/* Navigation Arrows */
+.store-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f5e6aa;
+    border-bottom: 2px solid #ffffff;
+}
+
+.nav-arrow {
+    background: #2c1810;
+    border: none;
+    color: #ffeb99;
+    font-size: 1.2rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: GameBubble;
+    transition: all 0.2s;
+}
+
+.nav-arrow:hover {
+    background: #96f00f;
+    color: #2c1810;
+    transform: scale(1.05);
+}
+
+.category-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c1810;
+}
+
+/* Items Container */
+.store-items-list {
+    min-height: 260px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fffef7;
+}
+
+.store-item {
+    background: #fef3d6;
+    border-radius: 15px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #e0c88a;
+    transition: all 0.15s;
+}
+
+.store-item:hover {
+    background: #ffe6b3;
+    transform: translateX(3px);
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #2c1810;
+}
+
+.item-price {
+    font-size: 0.rem;
+    color: #000000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: 10px;
+}
+
+.buy-btn {
+    background: #2c1810;
+    border: none;
+    color: #ffeb99;
+    font-family: GameBubble;
+    padding: 5px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    transition: all 0.15s;
+}
+
+.buy-btn:hover {
+    background: #96f00f;
+    color: #2c1810;
+    transform: scale(1.02);
+}
+
+.store-menu-footer {
+    background: #f5e6aa;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 17px 17px;
+    border-top: 2px solid #d4a017;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/*Lower game dashboard*/
+
+#lower-game-dashboard {
+    position: absolute;
+    margin-top: 60%;
+    margin-left: 45%;
+    padding: 100px 100px 100px 100px;
+    display: flex;
+    gap: 75px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pet-interactions {
+    width: 100px;
+    height: 100px;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffcd03;
+}
+
+
+.pet-interactions
+{
+    font-family: GameBubble;
+    font-size: 0.9rem;
+
+}
+
+/*Inventory */
+
+/* Inventory Container */
+#player-inventory-container {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    z-index: 100;
+}
+
+/* Inventory Menu Styles */
+#player-inventory-container .inventory-menu {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background: #fffef7;
+    border-radius: 20px;
+    border: 3px solid #000000;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+    z-index: 1000;
+    font-family: GameBubble;
+}
+
+#player-inventory-container .inventory-menu.hidden {
+    display: none;
+}
+
+.inventory-menu-header {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 17px 17px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    font-size: 1rem;
+}
+
+.close-inventory-btn {
+    background: #000;
+    border: none;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.close-inventory-btn:hover {
+    background: #ff4444;
+}
+
+/* Inventory Items List */
+.inventory-items-list {
+    min-height: 300px;
+    max-height: 350px;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fffef7;
+}
+
+.empty-inventory {
+    text-align: center;
+    color: #999;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+}
+
+.inventory-item {
+    background: #fef3d6;
+    border-radius: 15px;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #e0c88a;
+}
+
+.inventory-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+}
+
+.inventory-item-name {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #2c1810;
+}
+
+.inventory-item-category {
+    font-size: 0.6rem;
+    color: #7a5a3a;
+    font-family: monospace;
+}
+
+.inventory-item-count {
+    background: #2c1810;
+    color: #ffeb99;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    min-width: 45px;
+    text-align: center;
+}
+
+.inventory-menu-footer {
+    background: #f5e6aa;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 17px 17px;
+    border-top: 2px solid #d4a017;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Pet Interaction Menu Style */
+#pet-interaction-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+    z-index: 1000;
+    border: 2px solid #ff9800;
+}
+
+.interaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+#interaction-menu-title
+{   
+    margin-left: 20px;
+    font-family: GameBubble;
+}
+
+
+.interaction-item-info {
+    flex: 1;
+}
+
+.interaction-item-name {
+    font-weight: bold;
+    font-family: GameBubble;
+    font-size: 14px;
+}
+
+.interaction-item-effect {
+    font-size: 12px;
+    color: #4caf50;
+}
+
+.interaction-item-count {
+    font-size: 12px;
+    color: #666;
+    margin: 0 10px;
+}
+
+.use-item-btn {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.use-item-btn:hover {
+    background: #45a049;
+}
+
+.empty-interaction-items {
+    font-family: GameBubble;
+    text-align: center;
+    padding: 30px;
+    color: #999;
+}
+
+#close-interaction-menu {
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left:10px;
+}
+
+.algo-pet-img
+{
+    position:relative;
+    height: 450px;
+    width: 800px;
+}
+
+#selected-pet-container
+{
+    background-color:#f5e6aa;
+    backdrop-filter: blur(4px);
+    border-radius: 100px;
+    padding: 20px;
+    height: 250px;  
+    width: 250px;   
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgb(0, 0, 0);
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 28%;  
+    left: 45%;
+}
+
+#selected-pet-img
+{
+    max-width: 175%;
+    max-height: 175%;
+    object-fit: fill;
+}
+
+.pet-interactions:hover
+{
+  transform: scale(1.2);
+  background-color: #0af716;
+}
+
+#store-container:hover
+{
+  transform: scale(1.2);
+}
+
+#player-inventory-container:hover
+{
+    transform: scale(1.2);
+
+}
+
+
+.player-information
+{
+    font-family: GameBubble;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    font-size: 20px;;
+    
+}
+
+#pet-name-1
+{
+    font-size: 35px;
+    color:#692700;
+}
+
+
+/*Runaway Screen*/
+
+.runaway-button-container
+{
+    display: flex;
+    flex-direction: row;
+    gap:70px;
+    margin-top: 15%;
+    margin-left:20%;
+    position: relative;
+}
+
+.runaway-text-class
+{   
+    position: relative;
+    font-family: GameBubble;
+    font-size: 5em;
+    top: 150px;
+    left:100px;
+}

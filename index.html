@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<title>Algo Pals: Become Virtual Best Friends!</title>
+<script src="https://kit.fontawesome.com/84e248989c.js" crossorigin="anonymous"></script>
+<link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+
+
+<!-- Home Screen -->
+   <section id="home-screen" class="screen  active">
+
+   <div id = "home-screen-container"> 
+  <!-- Background image -->
+    <img id = "img-home" class = "bg-img" src = "assets/gingham-transparent-1.png"> 
+    <img id = "img-logo" src = "assets/Algo-Pet-Logo.png"> 
+    <button id="home-start-button" class="buttons"> Start Game </button> 
+    <div><!--end of home screen items -->
+    </section>
+
+<!--   Player Name Entry Screen --> 
+    <section id = "name-entry-screen" class = "screen">
+    <div id = "name-entry-screen-container">
+    <h1 id="name-screen-title" class = "bouncing-text headings"> What is your name?...</h1>
+    <img id = "bg-img-name-entry-screen" class = "bg-img" src = "assets/gingham-transparent-1.png"> 
+    <input id = "name-entry-box" class = "entry-box" type = "text" placeholder="Player Name" maxlength="20" pattern="^[^\s]+$"> <br>
+    <button id = "confirm-name-btn" class="buttons" > OK! </button> </div>
+    </section>
+
+ <!--   Country Entry Screen --> 
+    <section id = "country-entry-screen" class = "screen">
+    <div id = "country-entry-screen-container">
+    <img id = "bg-country-name-entry-screen" class = "bg-img" src = "assets/gingham-transparent-1.png"> 
+    <h1 id="country-screen-title" class="bouncing-text headings"> And you are from? ...</h1>
+    <select id = "countrySelect">
+    <option id = "player-select-country" value=" "> -- Select your Country -- </option>
+    </select>
+    <button id = "confirm-country-btn" class="buttons" > OK! </button> </div>
+    </section>   
+    
+<!-- Story Screen One -->
+<section id="story-screen-1" class="screen">
+    <div class="story-contents">
+        <div class="story-image-container">
+            <img id="story-img-1" class="story-image" src="assets/story-photos/story-screen-one-bg.png" alt="Story illustration">
+        </div>
+        <p id="story-text-screen-1" class="story-text">My name is <b id="player-name"></b>.<br>It's been 6 months since I've moved to Edinburgh from <b id="player-country"></b> for university.</p>
+    </div>
+    <div class="button-container">
+        <button id="next-btn-1" class="story-buttons next-button">Next</button>
+        <button id="skip-btn-1" class="story-buttons skip-button">Skip</button>
+    </div>
+</section>
+
+<!-- Story Screen Two -->
+<section id="story-screen-2" class="screen">
+    <div class="story-contents">
+        <div class="story-image-container">
+            <img id="story-img-2" class="story-image" src="assets/story-photos/story-screen-two.png" alt="Story illustration">
+        </div>
+        <p id="story-text-screen-2" class="story-text">It's been lonely, everyone here seems to be a bit closed off.<br>In my time here, I have made a few acquaintances, but not really any good pals..</p>
+    </div>
+    <div class="button-container">
+        <button id="next-btn-2" class="story-buttons next-button">Next</button>
+        <button id="back-btn-2" class="story-buttons back-button">Back</button>
+        <button id="skip-btn-2" class="story-buttons skip-button">Skip</button>
+    </div>
+</section>
+
+<!-- Story Screen Three -->
+<section id="story-three-3" class="screen">
+    <div class="story-contents">
+        <div class="story-image-container">
+            <img id="story-img-3" class="story-image" src="assets/story-photos/story-screen-three.png" alt="Story illustration">
+        </div>
+        <p id="story-text-screen-3" class="story-text">That's right!!!<br>I will get a pet! Someone to keep me company!</p>
+    </div>
+    <div class="button-container">
+        <button id="next-btn-3" class="story-buttons next-button">Next</button>
+        <button id="back-btn-3" class="story-buttons back-button">Back</button>
+        <button id="skip-btn-3" class="story-buttons skip-button">Skip</button>
+    </div>
+</section>
+
+<!--Instruction Screen -->
+    <section id = "instruction-screen" class = "screen">
+    <h1 class  = "game-text"> Welcome to Algo Pals! </h1>
+    <div id="instruction-1-container" class = "instruction-text">
+    <h2> The main premise of the game is to keep your pet happy and avoid letting them run away!</h2> <br>
+    <h2> How do you keep your pet happy, you may ask? </h2>
+    </div>
+    <div id = "instruction-1-img-container" class = "instruction-text"></div> 
+    <div id="instruction-2-container" class = "instruction-text">
+    <h2>There are four (4) ways to interact with your pet to achieve this: Feeding, Playing, Grooming & Resting. </h2>
+    <div id = "instruction-2-img-container"></div> 
+    <div id="instruction-3-container" class = "instruction-text">
+    <h2> Each positive interaction with items add to the individual meters. Dont let the meters go to 0%! You will earn "Algo-Points" which can be used to get extra goodies for your pet! </h2>
+    <div id = "instruction-3-img-container" class = "instruction-text"></div> 
+    <div id = "instruction-end-container" class = "instruction-text">
+    <p> Best of luck and have fun! </p>
+    <button id="instruction-end" class = "buttons"> Next -> </button> 
+    </div>
+</div>
+</section>
+
+<!-- Pet Selection Screen -->
+<section id = "pet-selection-screen" class = "screen"> 
+<div id="pet-selection-screen-container">
+    <img id = "bg-img-pet-selection-screen" class = "bg-img" src = "assets/gingham-transparent-1.png"> 
+    <h1 id = "pet-selection-screen-heading" class = "bouncing-text headings"> Select your Algo Pet!!!</h1>
+    <div id = "pet-selection-container">
+        <div id = "pet-img-1" class = "pet-option">
+            <img id="pet-img-1-photo" class="pet-image" src="assets/dalmation/dog-1-dalmation.png">
+        </div>
+        <div id = "pet-img-2" class = "pet-option">
+            <img id="pet-img-2-photo" class="pet-image" src="assets/tabby/cat-2-tabby.png">
+        </div>
+        <div id = "pet-img-3" class = "pet-option">
+            <img id="pet-img-3-photo" class="pet-image" src="assets/shepard/dog-1-shepard.png">
+        </div>
+        <div id = "pet-img-4" class = "pet-option">
+            <img id="pet-img-4-photo" class="pet-image" src="assets/tuxedo/cat-2-tuxedo.png">
+        </div>
+    </div>    
+    <button id = "pet-selection-button" class = "buttons">  OK!  </button>
+</div><!--end of pet selection screen container-->
+</section> 
+
+
+<!--Name pet screen-->
+<section id = "naming-pet-screen" class = "screen"> 
+<div id="naming-pet-screen-container">
+    <img id = "bg-img-naming-pet-screen" class = "bg-img" src = "assets/gingham-transparent-1.png"> 
+   <h1 id = "naming-pet-heading" class = "bouncing-text headings"> Name your Algo Pet! </h1>
+    <div id="pet-img-container">   </div>
+<div id="selected-pet-container" class = "selected-pet">
+    <img id="selected-pet-img" src="assets/dalmation/dog-1-dalmation.png" alt="Selected Pet" ">
+</div>
+    <input id = "pet-name-entry-box" class = "entry-box" type = "text" placeholder="Algo Pet Name" maxlength="20" pattern="^[^\s]+$"> <br>
+    <div id="pet-naming-button-container">
+    <button id = "confirm-pet-name-btn" class = "buttons"> OK!</button> 
+    <button id = "back-to-selection-btn" class = "buttons"> Back </buutton>
+    </div>
+</div> <!-- end of naming pet screen container-->
+
+</section>
+
+
+
+<!-- Main Game Dashboard -->
+<section id = "game-dashboard" class = "screen">
+<div id = "main-game-screen">
+
+<div id = upper-game-dashboard>
+
+<div id = "left-game-dashboard">
+<!-- Algo Point -->
+<div id = "algo-point-container">
+<span id="algo-point-heading"> Algo Points </span>
+<i class="fa-solid fa-paw fa-5x"></i>
+<span id ="algo-point-counter"> 100 </span>
+
+</div> <!--end of algo points-->
+
+<!--Ingame Store-->
+<div id="store-container">
+    <i class="fa-solid fa-store fa-3x"></i>
+    <br>
+    <span id="store-text">Store</span>
+    
+    <!-- Mini Menu Popup -->
+    <div id="store-mini-menu" class="store-menu hidden">
+        <div class="store-menu-header">
+            <span> Algo Shop </span>
+            <button id="close-store-menu" class="close-store-btn">x</button>
+        </div>
+        
+        <!-- Category Navigation Arrows -->
+        <div class="store-nav">
+            <button id="store-prev-btn" class="nav-arrow">◀</button>
+            <span id="store-category-title" class="category-title">Toys</span>
+            <button id="store-next-btn" class="nav-arrow">▶</button>
+        </div>
+        
+        <div class="store-items-list" id="store-items-list">
+        </div>
+        
+        <div class="store-menu-footer">
+            <span> Your Points: <span id="store-points-display">0</span></span>
+        </div>
+    </div>
+</div>
+
+</div> <!--end of left game dashboard-->
+
+
+<div id = "right-game-dashboard">
+
+<div id = "player-information-container" class = "player-information">
+<span>Player Name: <span id="player-name-1"> a</span></span>
+<span>Player Country: <span id = "player-country-1">b</span> </span>
+<span>Algo Pet Name: <span id = "pet-name-1">c</span></span> 
+
+</div>
+
+<!--Player Inventory-->
+<div id="player-inventory-container">
+    <i class="fa-solid fa-box fa-3x"></i>
+    <br>
+    <span id="inventory-text">Inventory</span>
+    
+    <!-- Inventory Mini Menu Popup -->
+    <div id="inventory-mini-menu" class="inventory-menu hidden">
+        <div class="inventory-menu-header">
+            <span> Your Items </span>
+            <button id="close-inventory-menu" class="close-inventory-btn">x</button>
+        </div>
+        
+        <div class="inventory-items-list" id="inventory-items-list">
+            <div class="empty-inventory"> No items yet. Visit the store</div>
+        </div>
+        
+        <div class="inventory-menu-footer">
+            <span> Total Items: <span id="total-items-count">0</span></span>
+        </div>
+    </div>
+</div> <!--end of right game dashboard-->
+
+
+<!-- Pet avatar in main game -->
+<div id="game-pet-avatar" style="text-align: center; margin-bottom: 20px;">
+    <img id="dashboard-pet-img" class = "algo-pet-img" src="assets/dalmation/dog-1-dalmation.png" alt="Selected Algo Pal">
+</div>
+</div> <!--end of upper game dashboard-->
+
+
+<div id="lower-game-dashboard">
+    <div id="hunger-container" class="pet-interactions">
+        <i class="fa-solid fa-bowl-food fa-4x"></i>
+        <span id="hunger-label" class="pet-interactions-text"> Hunger </span>
+        <span id="hunger-meter" class="pet-status-meter"> </span>
+    </div>
+
+    <div id="boredom-container" class="pet-interactions">
+        <i class="fa-solid fa-bone fa-4x"></i>    
+        <span id="boredom-label" class="pet-interactions-text"> Boredom </span>
+        <span id="boredom-meter" class="pet-status-meter">  </span>
+    </div>
+
+    <div id="rest-container" class="pet-interactions">
+        <i class="fa-solid fa-bed fa-4x"></i> 
+        <span id="rest-label" class="pet-interactions-text"> Rest </span>
+        <span id="rest-meter" class="pet-status-meter"> </span>   
+    </div>
+
+    <div id="cleanliness-container" class="pet-interactions">
+        <i class="fa-solid fa-bath fa-4x"></i>
+        <span id="cleanliness-label" class="pet-interactions-text"> Cleanliness </span>
+        <span id="cleanliness-meter" class="pet-status-meter"> </span>   
+    </div>
+
+<!-- Pet Interaction Mini Menu  -->
+<div id="pet-interaction-menu" class="mini-menu hidden">
+    <div class="menu-header">
+        <h3 id="interaction-menu-title"> Use Items</h3>
+        <button id="close-interaction-menu" class="close-menu-btn"> x </button>
+    </div>
+    <div class="menu-content">
+        <div id="interaction-items-list" class="items-list">
+        </div>
+    </div>
+</div>
+
+
+</div>  <!--end of lower game dashboard-->
+
+</div> <!-- end of main game screen-->
+
+</section>
+
+
+<!--Runaway Screen - displays when the pet runs away-->
+<section id="runaway-screen" class = "screen">
+  <span id = "runaway-text" class = "runaway-text-class"></span>
+  <div class = "runaway-button-container">
+  <button id="restart-button" class = "buttons"> Restart Game </button>
+  <button id = "get-back-button" class = "buttons"> Retrieve Pet - 75pts</button>
+</div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
